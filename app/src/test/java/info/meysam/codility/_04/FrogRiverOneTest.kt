@@ -13,5 +13,6 @@ class FrogRiverOneTest {
         val frogRiverOne=FrogRiverOne()
 
         assertEquals(6,frogRiverOne.solution(5,listOf(1,3,1,4,2,3,5,4).toIntArray()))
+        assertEquals(-1,frogRiverOne.solution(4,listOf(1,3,1,4,3,5,4).toIntArray()))
     }
 }
