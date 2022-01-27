@@ -76,9 +76,8 @@ class TapeEquilibrium {
             sum_part_one += A[p - 1] // the sum of part one
             sum_part_two = sum - sum_part_one // the sum of part two
             diff = sum_part_one - sum_part_two // the difference
-            if (diff < 0) // absolute value
-                diff = -diff // all the values can be computed (one pass)
-            min_diff = Math.min(min_diff, diff) // min difference
+
+            min_diff = Math.min(min_diff, abs(diff)) // min difference
         }
         return min_diff // return the min difference
 
