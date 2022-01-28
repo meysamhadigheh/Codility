@@ -87,14 +87,19 @@ class GenomicRangeQuery {
             val a = A[Q[i] + 1] - A[P[i]] // num of 'a' between P and Q
             val c = C[Q[i] + 1] - C[P[i]] // num of 'c' between P and Q
             val g = G[Q[i] + 1] - G[P[i]] // num of 'g' between P and Q
-            if (a > 0) { // there is 'a'
-                result[i] = 1
-            } else if (c > 0) { // there is 'c'
-                result[i] = 2
-            } else if (g > 0) { // there is 'g'
-                result[i] = 3
-            } else { // there is only 'T'
-                result[i] = 4
+            when {
+                a > 0 -> { // there is 'a'
+                    result[i] = 1
+                }
+                c > 0 -> { // there is 'c'
+                    result[i] = 2
+                }
+                g > 0 -> { // there is 'g'
+                    result[i] = 3
+                }
+                else -> { // there is only 'T'
+                    result[i] = 4
+                }
             }
         }
 
