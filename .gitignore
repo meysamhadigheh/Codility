@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+/app/src/main/java/info/meysam/unikie/
+/app/src/test/java/info/meysam/unikie/
